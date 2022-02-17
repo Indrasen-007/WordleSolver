@@ -43,6 +43,7 @@ while len(possibleSolution) > 1:
             for j in range(0, len(listOfLists)):
                 listOfLists[j] = listOfLists[j].replace(val[i], "")
 
+    # Update the regex and filter the possible solutions
     regexexp = openbracket + listOfLists[0] + closebracket + openbracket + listOfLists[1] + closebracket + openbracket + listOfLists[2] + closebracket + openbracket + listOfLists[3] + closebracket + openbracket + listOfLists[4] + closebracket + dollar
     r = re.compile(regexexp)
     possibleSolution = list(filter(r.match, possibleSolution))
